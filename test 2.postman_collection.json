@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "252d3906-9530-4f9e-90ad-9f076ad50bf2",
+		"name": "test 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "place/add/json",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"location\": { \r\n\"lat\": -38.383494, \r\n\"lng\": 33.427362 \r\n}, \"accuracy\": 50, \r\n\"name\": \"Frontline house\", \r\n\"phone_number\": \"(+91) 983 893 3937\", \r\n\"address\": \"29, side layout, cohen 09\", \r\n\"types\": [\r\n \"shoe park\", \r\n\"shop\"\r\n ],\r\n \"website\": \"http://google.com\", \r\n\"language\": \"French-IN\"\r\n }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"add",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place/get/json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ip_qaclick}}/maps/api/place/get/json?key=qaclick123&place_id=ee87338be566cc4e634bf784eaed96d1",
+					"host": [
+						"{{ip_qaclick}}"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"get",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						},
+						{
+							"key": "place_id",
+							"value": "ee87338be566cc4e634bf784eaed96d1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place/update/json",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"place_id\":\"ee87338be566cc4e634bf784eaed96d1\",\r\n \"address\":\"100 Lenina street, RU\", \r\n\"key\":\"qaclick123\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ip_qaclick}}/maps/api/place/update/json?key=qaclick123",
+					"host": [
+						"{{ip_qaclick}}"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"update",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place/get_update/json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ip_qaclick}}/maps/api/place/get/json?key=qaclick123&place_id=ee87338be566cc4e634bf784eaed96d1",
+					"host": [
+						"{{ip_qaclick}}"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"get",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						},
+						{
+							"key": "place_id",
+							"value": "ee87338be566cc4e634bf784eaed96d1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"place_id\":\"ee87338be566cc4e634bf784eaed96d1\" \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ip_qaclick}}/maps/api/place/delete/json?key=qaclick123",
+					"host": [
+						"{{ip_qaclick}}"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"delete",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place/get_delete/json",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ip_qaclick}}/maps/api/place/get/json?key=qaclick123&place_id=ee87338be566cc4e634bf784eaed96d1",
+					"host": [
+						"{{ip_qaclick}}"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"get",
+						"json"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "qaclick123"
+						},
+						{
+							"key": "place_id",
+							"value": "ee87338be566cc4e634bf784eaed96d1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
